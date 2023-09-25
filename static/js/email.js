@@ -34,13 +34,16 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     try {
-      const response = await fetch("http://localhost:3000/auth/sendotp", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
+      const response = await fetch(
+        "https://loader-service.onrender.com/auth/sendotp",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({ email: email }),
         },
-        body: JSON.stringify({ email: email }),
-      });
+      );
       if (response.status === 200) {
         message.textContent = "Code sent. Check your email";
         startCountdown();
@@ -63,13 +66,16 @@ document.addEventListener("DOMContentLoaded", function () {
       }
 
       try {
-        const response = await fetch("http://localhost:3000/auth/checkemail", {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
+        const response = await fetch(
+          "https://loader-service.onrender.com/auth/checkemail",
+          {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify({ email: email }),
           },
-          body: JSON.stringify({ email: email }),
-        });
+        );
 
         if (response.status === 200) {
           // If email is valid, show the code input and button
@@ -97,16 +103,19 @@ document.addEventListener("DOMContentLoaded", function () {
       }
 
       try {
-        const response = await fetch("http://localhost:3000/auth/verifyemail", {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
+        const response = await fetch(
+          "https://loader-service.onrender.com/auth/verifyemail",
+          {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify({ email: email, code: code }),
           },
-          body: JSON.stringify({ email: email, code: code }),
-        });
+        );
 
         if (response.status === 200) {
-          window.location.href = "http://localhost:3000/profile";
+          window.location.href = "https://loader-service.onrender.com/profile";
         } else if (response.status === 401) {
           message.textContent = "Code expired or incorrect.";
         } else {

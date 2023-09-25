@@ -62,7 +62,7 @@ uploadForm.addEventListener("submit", function (e) {
       enableUpload();
     } else {
       loadingDiv.style.display = "block";
-      fetch("http://localhost:3000/videos/upload", {
+      fetch("https://loader-service.onrender.com/videos/upload", {
         method: "POST",
         body: formData,
       })

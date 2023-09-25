@@ -1,4 +1,4 @@
-fetch("http://localhost:3000/videos/video")
+fetch("https://loader-service.onrender.com/videos/video")
   .then((response) => {
     return response.json();
   })
@@ -8,7 +8,7 @@ fetch("http://localhost:3000/videos/video")
     if (data.length) {
       videosContainer.innerHTML = `<div> <a
       class="navbar-link navbar-link-profile"
-      href="http://localhost:3000/videos/watch" style="background-color: black;color: white;">Watch All</a
+      href="https://loader-service.onrender.com/videos/watch" style="background-color: black;color: white;">Watch All</a
     ></div><br>`;
       data.sort((a, b) => {
         return b.name - a.name;
@@ -20,7 +20,7 @@ fetch("http://localhost:3000/videos/video")
         videoDiv.setAttribute("data-index", index);
         videoDiv.innerHTML = `<div class="video-card">
           <div class="video-image">
-            <img class="video-image" src="http://localhost:3000/videos/image/${
+            <img class="video-image" src="https://loader-service.onrender.com/videos/image/${
               video.image
             }" alt="Video Image">
           </div>
@@ -33,7 +33,7 @@ fetch("http://localhost:3000/videos/video")
         `;
         const videoCard = videoDiv.querySelector(".video-card");
         videoCard.addEventListener("click", () => {
-          window.location.href = `http://localhost:3000/videos/watch?v=${video.name}&i=${index}`;
+          window.location.href = `https://loader-service.onrender.com/videos/watch?v=${video.name}&i=${index}`;
         });
 
         const fetchButton = videoDiv.querySelector(".fetch-button");
@@ -68,7 +68,7 @@ fetch("http://localhost:3000/videos/video")
 function fetchAndDeleteVideo(videoName, videoIndex) {
   // Replace the URL below with your desired API endpoint for deleting the video
   return new Promise((resolve, reject) => {
-    const apiUrl = `http://localhost:3000/videos/video/${videoName}`;
+    const apiUrl = `https://loader-service.onrender.com/videos/video/${videoName}`;
     fetch(apiUrl, {
       method: "DELETE",
     })
