@@ -7,7 +7,7 @@ passport.use(
     {
       clientID: process.env.FACEBOOK_CLIENT_ID,
       clientSecret: process.env.FACEBOOK_CLIENT_SECRET,
-      callbackURL: `/auth/facebook/callback`,
+      callbackURL: `${process.env.SERVER_HOST}/auth/facebook/callback`,
       profileFields: ["id", "displayName", "picture.type(large)", "emails"],
     },
     (accessToken, refreshToken, profile, done) => {
@@ -21,7 +21,7 @@ passport.use(
     {
       clientID: process.env.GOOGLE_CLIENT_ID,
       clientSecret: process.env.GOOGLE_CLIENT_SECRET,
-      callbackURL: "/auth/google/callback",
+      callbackURL: `${process.env.SERVER_HOST}/auth/google/callback`,
     },
     (accessToken, refreshToken, profile, done) => {
       profile.photos[0].value = profile.photos[0].value.replace(
