@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Payment Failed</title>
+    <link rel="stylesheet" type="text/css" href="../css/navbar.css" />
+    <style>
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+      }
+
+      .failure-container {
+        text-align: center;
+        background-color: #ff5733;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        color: #fff;
+      }
+
+      .failure-icon {
+        font-size: 60px;
+        margin-bottom: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <%- include("./navbar") %>
+    <div class="failure-container">
+      <div class="failure-icon">&#10060;</div>
+      <h1>Payment Failed</h1>
+      <p>Sorry, your payment could not be processed. Please try again later.</p>
+    </div>
+  </body>
+</html>

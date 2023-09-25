@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Email Verification</title>
+    <link rel="stylesheet" href="../css/email.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="top-div">
+        <p>Please enter email to complete account</p>
+        <a href="/auth/logout" id="logoutBtn">logout</a>
+      </div>
+      <div class="form-div">
+        <input type="email" id="emailInput" placeholder="Enter your email" />
+        <div id="codeInputContainer" style="display: none">
+          <input
+            type="text"
+            id="codeInput"
+            placeholder="Enter verification code" />
+          <button id="sendCodeButton">Send Code</button>
+        </div>
+        <button id="verifyButton">Verify Email</button>
+        <p id="message"></p>
+      </div>
+    </div>
+    <script src="../js/en-email.js"></script>
+  </body>
+</html>
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Email Verification</title>
+    <link rel="stylesheet" href="../css/email.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="top-div">
+        <p>Please enter email to complete account</p>
+      </div>
+      <div class="form-div">
+        <input type="email" id="emailInput" placeholder="Enter your email" />
+        <button id="verifyButton">Verify Email</button>
+        <p id="message"></p>
+      </div>
+    </div>
+    <script src="../js/email.js"></script>
+  </body>
+</html> -->

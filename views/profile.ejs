@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="../css/navbar.css" />
+    <link rel="stylesheet" type="text/css" href="../css/profile.css" />
+    <title>Profile</title>
+  </head>
+  <body>
+    <%- include("./navbar") %>
+    <div class="profile-container">
+      <div class="profile-image">
+        <img src="<%= userimage %>" alt="User Image" />
+      </div>
+      <h2 class="profile-name"><%= username %></h2>
+      <p class="profile-email"><%= email %></p>
+      <div>
+        <a id="deleteAccount" href="http://localhost:3000/auth/deleteAccount"
+          >Delete account</a
+        >
+      </div>
+      <br />
+    </div>
+    <div id="videos-container"></div>
+    <script src="../js/en-profile.js"></script>
+    <script src="../js/en-navbar.js"></script>
+  </body>
+</html>

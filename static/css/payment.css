@@ -1,0 +1,79 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+    margin: 0;
+    padding: 0;
+}
+
+.pricing-container {
+    display: flex;
+    justify-content: space-around;
+    margin: 20px;
+}
+
+.pricing-option {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    padding: 20px;
+    text-align: center;
+    justify-content: center;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 45%;
+}
+
+button {
+    background-color: #ebeff3;
+    color: #5767fa;
+    border: none;
+    padding: 10px 80px;
+    border-radius: 30px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #7092b6;
+}
+
+.message {
+    text-align: center;
+    margin-top: 20px;
+    font-weight: bold;
+}
+
+.select-button {
+    background-color: #ebeff3;
+    color: #5767fa;
+    border: none;
+    padding: 10px 60px;
+    border-radius: 30px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s;
+    display: inline-block;
+    text-align: center;
+    user-select: none;
+}
+
+.select-button:hover {
+    background-color: #8191a3;
+}
+
+@media screen and (max-width: 500px) {
+    .pricing-container {
+        flex-direction: column; /* Stack the divs vertically */
+        align-items: center; /* Center-align the divs */
+    }
+
+    .pricing-option {
+        width: 90%; /* Adjust the width as needed */
+        margin-bottom: 20px; /* Add spacing between the divs */
+    }
+
+    /* Reset the padding for the buttons */
+    .select-button{
+        padding: 10px 60px; /* Adjust the padding as needed */
+    }
+}

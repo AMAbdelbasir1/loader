@@ -1,0 +1,78 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.top-div {
+    background-color: #3498db;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
+
+.form-div {
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center; /* Center the content in the form-div */
+}
+
+input[type="email"],
+input[type="text"] {
+    width: 300px;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+input[type="text"]{
+    width: 150px;
+}
+button {
+    background-color: #3498db;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+}
+
+#message {
+    color: red;
+    font-weight: bold;
+}
+
+/* Style for the code input and button container */
+#codeInputContainer {
+    display: flex;
+    flex-direction: row; /* Display input and button side by side */
+    align-items: center; /* Vertically center the items */
+    justify-content: center; /* Horizontally center the items */
+    margin-top: 10px; /* Add some space between the email input/button and code input/button */
+    margin-bottom: 5px; /* Add some space between the email input/button and code input/button */
+}
+#logoutBtn{
+    display: flex;
+    text-decoration: none;
+    border: 1px solid #ccc;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+   background-color:red;
+}
+@media screen and (max-width: 400px) {
+    .form-div {
+        padding: 0px;
+    }
+    input[type="email"]{
+    width: 280px;
+}
+  }

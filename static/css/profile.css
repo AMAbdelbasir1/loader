@@ -1,0 +1,148 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+.profile-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+}
+
+.profile-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 15px;
+}
+
+.profile-image img {
+  width: 200px;
+  border-radius: 20%;
+}
+
+.profile-details {
+  margin-left: 20px;
+}
+
+#videos-container {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center; /* Center the columns horizontally */
+  align-items: center;
+
+  width: 100%;
+}
+
+.video-container {
+  display: flex;
+  flex-wrap: wrap;
+  /* flex-direction: row; */
+  justify-content: center;
+  align-items: center;
+  /* border: 1px solid #ccc; */
+  border-radius: 5px;
+  width: 1000px;
+  max-width: 100%; /* Responsive width */
+  margin-bottom: 5px;
+}
+
+.video-card {
+  cursor: pointer;
+  display: flex;
+  flex-wrap: wrap;
+  width: 700px;
+  max-width: 100%; /* Responsive width */
+  margin: 10px;
+  padding: 10px;
+}
+
+.video-image img {
+  width: 300px;
+  height: auto;
+  border-radius: 5px;
+}
+
+.video-details {
+  margin-top: 10px;
+  margin-left: 30px;
+}
+
+.fetch-button {
+  width: 80px;
+  height: 50px;
+  margin-top: 10px;
+  background-color: red;
+  border: none;
+  border-radius: 30px;
+  color: white;
+}
+
+#deleteAccount {
+  text-decoration: none;
+  background-color: red;
+  color: white;
+  padding: 15px;
+  border-radius: 20px;
+}
+@media (max-width: 650px) {
+  .profile-info {
+    margin-bottom: 0px;
+    padding: auto;
+  }
+
+  .profile-image img {
+    width: 150px; /* Responsive width */
+    height: 150px;
+  }
+
+  .video-container {
+    padding: 0px; /* increased padding */
+    border: 1px solid #ccc;
+  }
+  .fetch-button {
+    font-size: 15px;
+  }
+  .video-card {
+    cursor: pointer;
+    width: 400px;
+    height: 350px;
+    max-width: 100%; /* Responsive width */
+    
+  }
+  .video-image img {
+    width: 350px;
+   height:  250px;
+  }
+}
+@media screen and (max-width: 380px) {
+  .video-card {
+    height: 260px;
+   font-size: 15px; /* Responsive width */
+    
+  }
+  #deleteAccount {
+    font-size: 15px;
+    padding: 12px;
+  }
+  body {
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+  .fetch-button {
+    font-size: 10px;
+    width: 100px;
+    height: 25px;
+  }
+  .video-image img {
+    width: 300px;
+    height: 180px;
+  }
+}
+ 
+  

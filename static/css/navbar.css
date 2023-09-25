@@ -1,0 +1,161 @@
+/* Your existing CSS for desktop screens */
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #f2f2f2;
+  padding: 5px;
+  padding-left: 30px;
+  padding-right: 80px;
+  margin: 0px;
+  transition: all 0.3s ease; /* Add transition for smooth effect */
+}
+
+/* Add this CSS to make the navbar fixed when scrolling down */
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 1; /* Adjust the z-index as needed */
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Add a box shadow for a nice effect */
+}
+
+.navbar-logo {
+  display: flex;
+  font-weight: bold;
+  font-size: 20px;
+  align-items: center;
+  justify-content: center;
+}
+
+.navbar-links {
+  display: flex;
+  gap: 60px;
+}
+
+.navbar-link {
+  display: flex;
+  text-decoration: none;
+  border: 1px solid #ccc;
+  align-items: center;
+  justify-content: center;
+}
+
+.navbar-link-upload {
+  background-color: #f2f2f2;
+  color: rgb(14, 10, 10);
+  padding: 15px;
+  border-radius: 20px;
+}
+
+.navbar-link-profile {
+  background-color: #f2f2f2;
+  color: rgb(17, 13, 13);
+  padding: 15px;
+  border-radius: 20px;
+}
+
+.navbar-link-logout {
+  background-color: red;
+  color: white;
+  padding: 15px;
+  border-radius: 20px;
+}
+
+
+
+@media (max-width: 768px) {
+  .navbar {
+    padding-left: 0px; /* Adjust the padding for smaller screens */
+    padding-right: 0px; /* Adjust the padding for smaller screens */
+  }
+
+  .navbar-links {
+    /* flex-direction: column; Stack navbar links vertically for smaller screens */
+    gap: 10px; /* Reduce the gap between stacked navbar links */
+  }
+
+  .navbar-link {
+    width: 100%; /* Make navbar links take up the full width */
+    text-align: center; /* Center-align the text within navbar links */
+    padding: 10px; /* Reduce the padding for navbar links on smaller screens */
+    font-size: 14px; /* Reduce the font size for navbar links on smaller screens */
+  }
+}
+
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 2;
+  top: 0;
+  right: 0; 
+  background-color: #7a7a7a;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+.sidenav a:hover {
+  color: #665a5a;
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  left: 25px; 
+  font-size: 36px;
+  margin-right: 50px; 
+  color: red;
+}
+
+/* Adjust the styles for the links */
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+  margin-bottom: 10px; /* Add margin to create space between links */
+}
+
+/* Adjust the styles for each link type */
+.sidebar-link-upload {
+  background-color: #f2f2f2;
+  color: rgb(14, 10, 10);
+}
+
+.sidebar-link-profile {
+  background-color: #f2f2f2;
+  color: rgb(17, 13, 13);
+}
+
+.sidebar-link-logout {
+  background-color: red;
+  color: white;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+
+@media (min-width: 501px) {
+  .sidenav {
+      display: none;
+  }
+  #openCloseBtn{
+    display: none;
+  }
+}
+
+/* Add CSS to hide the navbar links on screens 500px or less */
+@media (max-width: 500px) {
+  .navbar-links {
+      display: none;
+  }
+  .navbar-link {
+    font-size: 10px;
+    padding-bottom: 10px; 
+  }
+}
