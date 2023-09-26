@@ -27,7 +27,7 @@ const loginFacbook = async (req, res) => {
       const session = await Session.find({
         "session.userId": userCheck._id.toString(),
       });
-      if (session.length > 1) {
+      if (session.length >= 1) {
         req.session.destroy(() => {
           return res
             .status(406)
@@ -85,7 +85,7 @@ const loginGoogle = async (req, res) => {
       const session = await Session.find({
         "session.userId": userCheck[0]._id.toString(),
       });
-      if (session.length > 1) {
+      if (session.length >= 1) {
         req.session.destroy(() => {
           return res
             .status(406)
