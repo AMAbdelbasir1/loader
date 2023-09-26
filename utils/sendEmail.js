@@ -82,7 +82,7 @@ const welcomeUser = (username) => {
                         <li>this account and videos is private anyone can not show it</li>
                     </ul>
                     <p>Getting started is easy! Just click the button below to access your account:</p>
-                    <a class="button" href="http://localhost:3000/profile">Access Your Account</a>
+                    <a class="button" href="https://loader-service.onrender.com/profile">Access Your Account</a>
                 </div>
             </div>
         </body>
