@@ -56,7 +56,6 @@ const paymentAll = async (req, res) => {
 const webhookProcessed = async (req, res) => {
   try {
     const payload = req.body.obj;
-    console.log(payload.order.shipping_data);
     const {
       amount_cents,
       created_at,
@@ -105,7 +104,6 @@ const webhookProcessed = async (req, res) => {
     let hash = createHmac("sha512", process.env.HMAC_KEY)
       .update(lexogragical)
       .digest("hex");
-    console.log(success);
     if (hash === req.query.hmac) {
       if (success) {
         await User.updateOne(
