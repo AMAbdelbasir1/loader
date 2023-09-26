@@ -52,3 +52,9 @@ h2 {
   height: 20px;
   margin-right: 10px;
 }
+
+@media screen and (max-width: 768px) {
+  .login-box {
+    width: 300px;
+  }
+}

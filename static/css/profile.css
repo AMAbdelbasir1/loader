@@ -90,7 +90,7 @@ body {
   padding: 15px;
   border-radius: 20px;
 }
-@media (max-width: 650px) {
+@media screen and (max-width: 650px) {
   .profile-info {
     margin-bottom: 0px;
     padding: auto;
