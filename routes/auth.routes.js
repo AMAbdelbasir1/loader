@@ -25,7 +25,9 @@ router.get("/facebook", passport.authenticate("facebook"));
 
 router.get(
   "/facebook/callback",
-  passport.authenticate("facebook", { failureRedirect: "/auth/login/failed" }),
+  passport.authenticate("facebook", {
+    failureRedirect: `${process.env.SERVER_HOST}/auth/login/failed`,
+  }),
   loginFacbook,
 );
 
