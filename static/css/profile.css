@@ -64,7 +64,7 @@ body {
 
 .video-image img {
   width: 300px;
-  height: auto;
+  max-height: 300px;
   border-radius: 5px;
 }
 
