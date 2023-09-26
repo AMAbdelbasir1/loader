@@ -4,16 +4,51 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Payment Failed</title>
-    <link rel="stylesheet" type="text/css" href="../css/navbar.css" />
-    <link rel="stylesheet" type="text/css" href="../css/paymentstatus.css" />
+    <style>
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+      }
+
+      .failure-container {
+        text-align: center;
+        background-color: #ff5733;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        color: #fff;
+      }
+
+      .failure-icon {
+        font-size: 60px;
+        margin-bottom: 20px;
+      }
+      .btn-link {
+        display: inline-block;
+        padding: 10px 20px;
+        background-color: #007bff;
+        color: #fff;
+        text-decoration: none;
+        border-radius: 5px;
+        transition: background-color 0.3s;
+      }
+
+      .btn-link:hover {
+        background-color: #0056b3;
+      }
+    </style>
   </head>
   <body>
-    <%- include("./navbar") %>
     <div class="failure-container">
       <div class="failure-icon">&#10060;</div>
       <h1>Payment Failed</h1>
       <p>Sorry, your payment could not be processed. Please try again later.</p>
+      <a class="btn-link" href="https://loader-service.onrender.com/videos"
+        >Continue</a
+      >
     </div>
   </body>
-  <script src="../js/en-navbar.js"></script>
 </html>
