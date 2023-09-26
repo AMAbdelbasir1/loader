@@ -120,7 +120,7 @@ body {
    height:  250px;
   }
 }
-@media screen and (max-width: 380px) {
+@media screen and (max-width: 500px) {
   .video-card {
     height: 260px;
    font-size: 15px; /* Responsive width */

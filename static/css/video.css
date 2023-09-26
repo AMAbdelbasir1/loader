@@ -44,7 +44,7 @@ body {
   cursor: pointer;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 500px) {
   .video-player {
     padding-bottom: 60.25%;
   }

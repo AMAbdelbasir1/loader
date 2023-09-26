@@ -76,7 +76,7 @@ button[type="submit"] {
   border-radius: 30px;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 500px) {
   button[type="submit"] {
     width: 200px;
   }
