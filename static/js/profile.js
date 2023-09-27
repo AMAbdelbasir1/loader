@@ -1,6 +1,6 @@
 const videosContainer = document.getElementById("videos-container");
 videosContainer.innerHTML = "<p>loading videos ...</p>";
-fetch("https://loader-service.onrender.com/videos/video")
+fetch("/videos/video")
   .then((response) => {
     return response.json();
   })
@@ -10,7 +10,7 @@ fetch("https://loader-service.onrender.com/videos/video")
     if (data.length) {
       videosContainer.innerHTML = `<div> <a
       class="navbar-link navbar-link-profile"
-      href="https://loader-service.onrender.com/videos/watch" style="background-color: black;color: white;">Watch All</a
+      href="/videos/watch" style="background-color: black;color: white;">Watch All</a
     ></div><br>`;
       data.sort((a, b) => {
         return b.name - a.name;
@@ -22,7 +22,7 @@ fetch("https://loader-service.onrender.com/videos/video")
         videoDiv.setAttribute("data-index", index);
         videoDiv.innerHTML = `<div class="video-card">
           <div class="video-image">
-            <img class="video-image" src="https://loader-service.onrender.com/videos/image/${
+            <img class="video-image" src="/videos/image/${
               video.image
             }" alt="Video Image">
           </div>
@@ -35,7 +35,7 @@ fetch("https://loader-service.onrender.com/videos/video")
         `;
         const videoCard = videoDiv.querySelector(".video-card");
         videoCard.addEventListener("click", () => {
-          window.location.href = `https://loader-service.onrender.com/videos/watch?v=${video.name}&i=${index}`;
+          window.location.href = `/videos/watch?v=${video.name}&i=${index}`;
         });
 
         const fetchButton = videoDiv.querySelector(".fetch-button");
@@ -70,7 +70,7 @@ fetch("https://loader-service.onrender.com/videos/video")
 function fetchAndDeleteVideo(videoName, videoIndex) {
   // Replace the URL below with your desired API endpoint for deleting the video
   return new Promise((resolve, reject) => {
-    const apiUrl = `https://loader-service.onrender.com/videos/video/${videoName}`;
+    const apiUrl = `/videos/video/${videoName}`;
     fetch(apiUrl, {
       method: "DELETE",
     })

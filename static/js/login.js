@@ -7,5 +7,5 @@ function loginWithGoogle() {
 }
 
 function loginWithFacebook() {
-  window.location.href = "https://loader-service.onrender.com/auth/facebook";
+  window.location.href = "/auth/facebook";
 }

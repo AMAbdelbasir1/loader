@@ -10,7 +10,7 @@ premiumButton.addEventListener("click", () => {
   // Fetch the premium API
   premiumButton.disabled = true;
   showMessage("Wait payment link is generating...");
-  fetch("https://loader-service.onrender.com/visa/premium")
+  fetch("/visa/premium")
     .then((response) => {
       if (response.status === 200) {
         return response.json();

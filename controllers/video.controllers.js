@@ -300,7 +300,7 @@ const uploadPage = async (req, res) => {
   const user = await User.findById(req.session.userId).select([
     "username",
     "limit",
-    "premium",
+    "premuim",
   ]);
   if (!user) {
     return res.status(403).redirect("/auth/logout");

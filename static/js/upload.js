@@ -12,7 +12,7 @@ uploadForm.addEventListener("submit", function (e) {
   const upgradInput = document.getElementById("premuim");
   messageDiv.innerText = "";
   if (limitInput.value <= 0) {
-    if (!upgradInput.value) {
+    if (!upgradInput.value == "true") {
       messageDiv.innerText =
         "Limit Reached ,please upgrad to upload more videos";
     } else {
@@ -49,13 +49,13 @@ uploadForm.addEventListener("submit", function (e) {
     // console.log("Video Size: " + videoSizeMB + " MB");
     // console.log("Video Quality: " + videoQuality);
     var maxduration = 120;
-    console.log(upgradInput, upgradInput.value, Boolean(upgradInput.value));
-    if (upgradInput.value || Boolean(upgradInput.value)) {
+    // console.log(upgradInput, upgradInput.value, Boolean(upgradInput.value));
+    if (upgradInput.value == "true") {
       maxduration = 600;
     }
     if (video.duration > maxduration) {
       loadingDiv.style.display = "none";
-      if (upgradInput.value || Boolean(upgradInput.value)) {
+      if (upgradInput.value == "true") {
         messageDiv.innerText = "Video duration exceeds 10 minutes.";
       } else {
         messageDiv.innerText = "Video duration exceeds 2 minutes.";
@@ -63,7 +63,7 @@ uploadForm.addEventListener("submit", function (e) {
       enableUpload();
     } else {
       loadingDiv.style.display = "block";
-      fetch("https://loader-service.onrender.com/videos/upload", {
+      fetch("/videos/upload", {
         method: "POST",
         body: formData,
       })

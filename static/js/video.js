@@ -33,7 +33,7 @@ if (er) {
   loadVideos();
 }
 function loadVideos() {
-  fetch("https://loader-service.onrender.com/videos/video")
+  fetch("/videos/video")
     .then((response) => {
       if (!response.ok) {
         if (response.status == 404) {
@@ -125,7 +125,7 @@ function loadVideos() {
         // Make an AJAX request to fetch the video with the selected quality
         const currentPlaybackTime = videoPlayer.currentTime;
         try {
-          const currentVideoSrc = `https://loader-service.onrender.com/videos/video/${vn}?q=${selectedQuality}`;
+          const currentVideoSrc = `/videos/video/${vn}?q=${selectedQuality}`;
 
           const response = await fetch(currentVideoSrc);
           if (!response.ok) {
@@ -152,7 +152,7 @@ function loadVideos() {
     });
 }
 async function loadFetchVideo(video) {
-  const videoURL = `https://loader-service.onrender.com/videos/video/${video}?q=default`;
+  const videoURL = `/videos/video/${video}?q=default`;
 
   // Create a Promise to handle the video loading
   const res = await fetch(videoURL);
