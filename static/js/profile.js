@@ -1,3 +1,4 @@
+videosContainer.innerHTML = "<p>loading videos ...</p>";
 fetch("https://loader-service.onrender.com/videos/video")
   .then((response) => {
     return response.json();
