@@ -1,10 +1,11 @@
+const videosContainer = document.getElementById("videos-container");
 videosContainer.innerHTML = "<p>loading videos ...</p>";
 fetch("https://loader-service.onrender.com/videos/video")
   .then((response) => {
     return response.json();
   })
   .then((data) => {
-    const videosContainer = document.getElementById("videos-container");
+    // const videosContainer = document.getElementById("videos-container");
     // console.log(data);
     if (data.length) {
       videosContainer.innerHTML = `<div> <a

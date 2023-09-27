@@ -14,6 +14,7 @@ const Store = new sessionStore({
 });
 // s
 app.use(compression());
+app.set('trust proxy', true);
 // const rateLimit = require("express-rate-limit");
 const hpp = require("hpp");
 const mongoSanitize = require("express-mongo-sanitize");
