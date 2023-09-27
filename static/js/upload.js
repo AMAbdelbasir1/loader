@@ -36,9 +36,9 @@ uploadForm.addEventListener("submit", function (e) {
   video.addEventListener("loadedmetadata", function () {
     var videoWidth = video.videoWidth;
     var videoHeight = video.videoHeight;
-    var videoQuality = detectVideoQuality(videoWidth, videoHeight);
+    // var videoQuality = detectVideoQuality(videoWidth, videoHeight);
     var videoSizeBytes = file.size;
-    var videoSizeMB = (videoSizeBytes / 1048576).toFixed(2);
+    // var videoSizeMB = (videoSizeBytes / 1048576).toFixed(2);
     // Convert to megabytes
     formData.append("videoWidth", videoWidth);
     formData.append("videoHeight", videoHeight);
@@ -48,13 +48,14 @@ uploadForm.addEventListener("submit", function (e) {
     // console.log("Video Height: " + videoHeight);
     // console.log("Video Size: " + videoSizeMB + " MB");
     // console.log("Video Quality: " + videoQuality);
-    let maxduration = 120;
-    if (upgradInput.value) {
-      maxduration = 10 * 60;
+    var maxduration = 120;
+    console.log(upgradInput, upgradInput.value, Boolean(upgradInput.value));
+    if (upgradInput.value || Boolean(upgradInput.value)) {
+      maxduration = 600;
     }
     if (video.duration > maxduration) {
       loadingDiv.style.display = "none";
-      if (upgradInput.value) {
+      if (upgradInput.value || Boolean(upgradInput.value)) {
         messageDiv.innerText = "Video duration exceeds 10 minutes.";
       } else {
         messageDiv.innerText = "Video duration exceeds 2 minutes.";
