@@ -20,7 +20,7 @@ const hpp = require("hpp");
 const mongoSanitize = require("express-mongo-sanitize");
 const xss = require("xss-clean");
 //
-app.set("view engine", "ejs");
+// app.set("view engine", "ejs");
 
 app.use(
   session({
@@ -35,6 +35,11 @@ app.use(passport.initialize());
 app.use(passport.session());
 app.use(express.static("public"));
 app.use(express.static("static"));
+app.set("views", __dirname + "/views");
+app.set("view engine", "ejs");
+app.use(express.static(__dirname + "public"));
+app.use(express.static(__dirname + "static"));
+
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 app.use(hpp());
