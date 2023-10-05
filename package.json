@@ -37,5 +37,6 @@
   },
   "devDependencies": {
     "javascript-obfuscator": "^4.1.0"
-  }
+  },
+  "packageManager": "npm@9.5.0"
 }
