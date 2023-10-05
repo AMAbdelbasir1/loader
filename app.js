@@ -12,9 +12,9 @@ const Store = new sessionStore({
   uri: process.env.DB_URI,
   collection: "sessions",
 });
-// s
+//
 app.use(compression());
-app.set('trust proxy', true);
+app.set("trust proxy", true);
 // const rateLimit = require("express-rate-limit");
 const hpp = require("hpp");
 const mongoSanitize = require("express-mongo-sanitize");
