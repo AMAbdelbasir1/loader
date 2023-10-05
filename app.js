@@ -33,8 +33,8 @@ app.use(
 );
 app.use(passport.initialize());
 app.use(passport.session());
-app.use(express.static("public"));
-app.use(express.static("static"));
+// app.use(express.static("public"));
+// app.use(express.static("static"));
 app.set("views", __dirname + "/views");
 app.set("view engine", "ejs");
 app.use(express.static(__dirname + "public"));
