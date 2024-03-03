@@ -53,21 +53,21 @@ dbConnection();
 // route serever
 const serverRoutes = require("./routes");
 serverRoutes(app);
-setInterval(function () {
-  request.get(
-    `${process.env.SERVER_HOST}/visa/hello`,
-    {
-      headers: { "Content-Type": "application/json" },
-    },
-    (error, response) => {
-      if (error) {
-        console.log(error);
-      } else {
-        console.log(response.body);
-      }
-    },
-  );
-}, 300000);
+// setInterval(function () {
+//   request.get(
+//     `${process.env.SERVER_HOST}/visa/hello`,
+//     {
+//       headers: { "Content-Type": "application/json" },
+//     },
+//     (error, response) => {
+//       if (error) {
+//         console.log(error);
+//       } else {
+//         console.log(response.body);
+//       }
+//     },
+//   );
+// }, 300000);
 app.all("*", (req, res) => {
   return res.status(404).render("error", { msg: "PAGE NOT FOUND" });
 });
