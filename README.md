@@ -2,6 +2,10 @@
 
 A small Express.js application for authenticated users to upload, transcode, serve, and manage video files with image thumbnails and basic rate-limiting. Includes user session storage in MongoDB and server-side video handling via Busboy + Fluent-FFmpeg.
 
+## Live Demo
+
+Check out the live application: [Demo](https://loader-service.onrender.com)
+
 ## Key Features
 
 - Upload videos and thumbnail images (server-side streaming via Busboy)
